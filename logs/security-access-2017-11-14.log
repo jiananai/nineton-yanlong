@@ -1,0 +1,40 @@
+14:05:27.293 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on ML-20170918KZXJ with PID 7248 (E:\workspace1\demo11\target\classes started by Administrator in E:\workspace1\demo11)
+14:05:27.295 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+14:05:27.295 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+14:05:29.274 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.157 seconds (JVM running for 2.839)
+14:08:32.931 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on ML-20170918KZXJ with PID 6860 (E:\workspace1\demo11\target\classes started by Administrator in E:\workspace1\demo11)
+14:08:32.933 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+14:08:32.933 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+14:08:34.871 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.093 seconds (JVM running for 2.631)
+14:12:50.405 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on ML-20170918KZXJ with PID 6564 (E:\workspace1\demo11\target\classes started by Administrator in E:\workspace1\demo11)
+14:12:50.407 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+14:12:50.407 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+14:12:52.376 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.153 seconds (JVM running for 2.678)
+14:13:01.166 [http-nio-8080-exec-1] ERROR com.example.demo.controller.PageController - java.lang.ArithmeticException: / by zero
+14:48:53.913 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on ML-20170918KZXJ with PID 6956 (E:\workspace1\demo11\target\classes started by Administrator in E:\workspace1\demo11)
+14:48:53.915 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+14:48:53.915 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+14:48:56.017 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.303 seconds (JVM running for 2.829)
+14:49:06.232 [http-nio-8080-exec-1] ERROR com.example.demo.controller.PageController - java.lang.ArithmeticException: / by zero
+14:49:19.774 [http-nio-8080-exec-6] DEBUG com.example.demo.dao.UserMapper.insert - ==>  Preparing: INSERT into user VALUES (NULL ,?,?) 
+14:49:19.790 [http-nio-8080-exec-6] DEBUG com.example.demo.dao.UserMapper.insert - ==> Parameters: 网易(String), 12342(String)
+14:49:19.797 [http-nio-8080-exec-6] DEBUG com.example.demo.dao.UserMapper.insert - <==    Updates: 1
+14:50:10.920 [http-nio-8080-exec-1] ERROR com.example.demo.controller.PageController - java.lang.ArithmeticException: / by zero
+14:50:24.671 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on ML-20170918KZXJ with PID 8220 (E:\workspace1\demo11\target\classes started by Administrator in E:\workspace1\demo11)
+14:50:24.673 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+14:50:24.673 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+14:50:26.582 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.094 seconds (JVM running for 2.622)
+14:50:32.417 [http-nio-8080-exec-1] ERROR com.example.demo.controller.PageController - java.lang.ArithmeticException: / by zero
+14:50:54.881 [http-nio-8080-exec-2] DEBUG com.example.demo.dao.UserMapper.insert - ==>  Preparing: INSERT into user VALUES (NULL ,?,?) 
+14:50:54.895 [http-nio-8080-exec-2] DEBUG com.example.demo.dao.UserMapper.insert - ==> Parameters: 绕弯儿群(String), 32121(String)
+14:50:54.899 [http-nio-8080-exec-2] DEBUG com.example.demo.dao.UserMapper.insert - <==    Updates: 1
+17:20:59.902 [main] INFO  com.example.demo.DemoApplication - Starting DemoApplication on ML-20170918KZXJ with PID 9856 (E:\workspace1\demo11\target\classes started by Administrator in E:\workspace1\demo11)
+17:20:59.903 [main] DEBUG com.example.demo.DemoApplication - Running with Spring Boot v1.5.8.RELEASE, Spring v4.3.12.RELEASE
+17:20:59.903 [main] INFO  com.example.demo.DemoApplication - The following profiles are active: dev
+17:21:02.067 [main] INFO  com.example.demo.DemoApplication - Started DemoApplication in 2.322 seconds (JVM running for 2.851)
+17:22:46.457 [http-nio-8080-exec-1] INFO  com.example.demo.extend.RequestDecryptResponseEncryptBodyMethodProcessor - RequestURI:/insert
+17:22:46.457 [http-nio-8080-exec-1] DEBUG com.example.demo.extend.RequestDecryptResponseEncryptBodyMethodProcessor - Read [class com.example.demo.pojo.User] as "application/json;charset=UTF-8" with [com.example.demo.extend.DecryptEncryptFastJsonHttpMessageConverter@3fb9c627]
+17:22:46.624 [http-nio-8080-exec-1] DEBUG com.example.demo.dao.UserMapper.insert - ==>  Preparing: INSERT into user VALUES (NULL ,?,?) 
+17:22:46.638 [http-nio-8080-exec-1] DEBUG com.example.demo.dao.UserMapper.insert - ==> Parameters: 赵六(String), 12334(String)
+17:22:46.642 [http-nio-8080-exec-1] DEBUG com.example.demo.dao.UserMapper.insert - <==    Updates: 1
+17:22:46.644 [http-nio-8080-exec-1] INFO  com.example.demo.extend.RequestDecryptResponseEncryptBodyMethodProcessor - RequestURI:/insert

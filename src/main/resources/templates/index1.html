@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/easyui.css}">
+    <link rel="stylesheet" th:href="@{/css/icon.css}">
+    <script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.easyui.min.js}"></script>
+    <script>
+        $(function () {
+            $('#ff').form({
+                url: "./addUser",
+                onSubmit: function () {
+                    // do some check
+                    // return false to prevent submit;
+                    if($('#ff').form('validate')){
+                        return true;
+                    }
+                    $.messager.alert("提示","表单还未完成");
+                    return false;
+                },
+                success: function (data) {
+                    //alert(1);
+                    var data = eval('(' + data + ')');
+                    if(data.status==200){
+                        $.messager.alert("提示","添加成功");
+                    }
+                }
+            });
+        })
+        function submit() {
+            $('#ff').submit();
+        }
+    </script>
+</head>
+<body>
+<form id="ff" method="post">
+    <table>
+        <tr>
+            <td>姓名:</td>
+            <td>
+                <input class="easyui-textbox" name="username" data-options="required:true" style="width:200px">
+            </td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td>
+                <input class="easyui-textbox" name="password" data-options="required:true" style="width:200px">
+            </td>
+        </tr>
+    </table>
+</form>
+<a id="btn" href="#" class="easyui-linkbutton" onclick="submit()">提交</a>
+</body>
+</html>

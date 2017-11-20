@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.dao.UserMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.pojo.User" >
+        <id column="userid" property="userid" jdbcType="VARCHAR" />
+        <result column="is_frist_charge" property="isFristCharge" jdbcType="INTEGER" />
+        <result column="username" property="username" jdbcType="VARCHAR" />
+        <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
+        <result column="if_coin1" property="ifCoin1" jdbcType="INTEGER" />
+        <result column="if_coin2" property="ifCoin2" jdbcType="INTEGER" />
+        <result column="consume_coin" property="consumeCoin" jdbcType="INTEGER" />
+        <result column="have_coin" property="haveCoin" jdbcType="INTEGER" />
+        <result column="consume_money" property="consumeMoney" jdbcType="DOUBLE" />
+        <result column="package_name" property="packageName" jdbcType="VARCHAR" />
+        <result column="platform" property="platform" jdbcType="VARCHAR" />
+    </resultMap>
+    <sql id="Where_clause">
+        <where>
+            <if test="user.isFristCharge != null" >
+                and is_frist_charge = #{user.isFristCharge,jdbcType=INTEGER}
+            </if>
+            <if test="user.userid != null" >
+                and userid = #{user.userid,jdbcType=VARCHAR}
+            </if>
+            <if test="user.username != null" >
+                and username = #{user.username,jdbcType=VARCHAR}
+            </if>
+            <!-- <if test="createtime != null" >
+                 createtime = #{createtime,jdbcType=TIMESTAMP},
+             </if>-->
+            <if test="user.ifCoin1 != null" >
+                and if_coin1 = #{user.ifCoin1,jdbcType=INTEGER}
+            </if>
+            <if test="user.ifCoin2 != null" >
+                and if_coin2 = #{user.ifCoin2,jdbcType=INTEGER}
+            </if>
+            <if test="user.consumeCoin != null" >
+                and consume_coin = #{user.consumeCoin,jdbcType=INTEGER}
+            </if>
+            <if test="user.haveCoin != null" >
+                and have_coin = #{user.haveCoin,jdbcType=INTEGER}
+            </if>
+            <if test="user.consumeMoney != null" >
+                and consume_money = #{user.consumeMoney,jdbcType=DOUBLE}
+            </if>
+            <if test="user.packageName != null" >
+                and package_name = #{user.packageName,jdbcType=VARCHAR}
+            </if>
+            <if test="user.platform != null" >
+                and platform = #{user.platform,jdbcType=VARCHAR}
+            </if>
+        </where>
+    </sql>
+    <select id="findUserByName" resultMap="BaseResultMap">
+        SELECT * FROM user WHERE username = #{username}
+    </select>
+    <insert id="insert" parameterType="User">
+        INSERT into user VALUES (NULL ,#{username},#{password})
+    </insert>
+    <select id="findAllUser" resultMap="BaseResultMap" parameterType="PageUtils">
+        SELECT * from USER
+        <include refid="Where_clause" />
+         ORDER by createtime DESC limit #{start},#{limit}
+    </select>
+    <select id="count" resultType="java.lang.Integer" parameterType="PageUtils">
+        SELECT COUNT(*) from USER <include refid="Where_clause" />
+    </select>
+    <delete id="deleteByPri">
+        DELETE from USER where userid = #{userid}
+    </delete>
+    <update id="updateByPri" parameterType="User">
+        update user
+        <set >
+            <if test="isFristCharge != null" >
+                is_frist_charge = #{isFristCharge,jdbcType=INTEGER},
+            </if>
+            <if test="username != null" >
+                username = #{username,jdbcType=VARCHAR},
+            </if>
+           <!-- <if test="createtime != null" >
+                createtime = #{createtime,jdbcType=TIMESTAMP},
+            </if>-->
+            <if test="ifCoin1 != null" >
+                if_coin1 = #{ifCoin1,jdbcType=INTEGER},
+            </if>
+            <if test="ifCoin2 != null" >
+                if_coin2 = #{ifCoin2,jdbcType=INTEGER},
+            </if>
+            <if test="consumeCoin != null" >
+                consume_coin = #{consumeCoin,jdbcType=INTEGER},
+            </if>
+            <if test="haveCoin != null" >
+                have_coin = #{haveCoin,jdbcType=INTEGER},
+            </if>
+            <if test="consumeMoney != null" >
+                consume_money = #{consumeMoney,jdbcType=DOUBLE},
+            </if>
+            <if test="packageName != null" >
+                package_name = #{packageName,jdbcType=VARCHAR},
+            </if>
+            <if test="platform != null" >
+                platform = #{platform,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where userid = #{userid,jdbcType=VARCHAR}
+    </update>
+</mapper>

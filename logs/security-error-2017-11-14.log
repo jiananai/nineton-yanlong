@@ -1,0 +1,4 @@
+14:13:01.166 [http-nio-8080-exec-1] ERROR com.example.demo.controller.PageController - java.lang.ArithmeticException: / by zero
+14:49:06.232 [http-nio-8080-exec-1] ERROR com.example.demo.controller.PageController - java.lang.ArithmeticException: / by zero
+14:50:10.920 [http-nio-8080-exec-1] ERROR com.example.demo.controller.PageController - java.lang.ArithmeticException: / by zero
+14:50:32.417 [http-nio-8080-exec-1] ERROR com.example.demo.controller.PageController - java.lang.ArithmeticException: / by zero
