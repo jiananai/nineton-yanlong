@@ -49,7 +49,7 @@ public class UserController {
     @ResponseBody
     public PageResult getUserList(Integer page,Integer limit,User user){
         PageResult result =userService.findAllUser(page,limit,user);
-        System.out.println(user);
+        //System.out.println(user);
         return result;
     }
 
